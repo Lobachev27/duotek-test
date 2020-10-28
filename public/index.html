@@ -8,12 +8,509 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="title" content=""/>
   <meta name="description" content=""/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
+<header class="header">
+  <div class="container">
+    <a class="header__logo" href="/">
+      <img src="./img/logo.svg">
+    </a>
+    <nav class="header__nav">
+      <a class="header__link active" href="javascript:void(0);">Календарь</a>
+      <a class="header__link" href="javascript:void(0);">Сообщения</a>
+      <a class="header__link" href="javascript:void(0);">Собеседники</a>
+      <a class="header__link" href="javascript:void(0);">Репетиторы</a>
+    </nav>
+    <div class="header__user">
+      <div class="header__user-img">
+        <img src="./img/user-1.jpg">
+      </div>
+      <div class="header__user-info">
+        <div class="header__user-name">Екатерина М.</div>
+        <div class="header__user-count">
+          <div class="header__user-q">52</div>
+          <div class="header__user-money">2394 $</div>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu"></div>
+  </div>
+</header>
+<div class="header-mobile">
+  <div class="container">
+    <nav class="header-mobile__nav">
+      <a class="header-mobile__link active" href="javascript:void(0);">Календарь</a>
+      <a class="header-mobile__link" href="javascript:void(0);">Сообщения</a>
+      <a class="header-mobile__link" href="javascript:void(0);">Собеседники</a>
+      <a class="header-mobile__link" href="javascript:void(0);">Репетиторы</a>
+    </nav>
+  </div>
+</div>
+<main class="main">
+  <section class="calendar">
+    <div class="container">
+      <div class="calendar__row">
+        <h1 class="title">Календарь</h1>
+        <nav class="calendar__nav">
+          <a class="calendar__tab" href="#request">Запросы</a>
+          <a class="calendar__tab" href="#record">Записи</a>
+          <a class="calendar__tab" href="#archive">Архив</a>
+        </nav>
+      </div>
+      <div id="request" class="calendar__wrapper">
+        <div class="calendar__month">
+          <div class="calendar__caption">Октябрь 2018</div>
+          <ul class="calendar__list">
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">15</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Октября</div>
+                  <div class="calendar__date-time">18:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-germany.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-2.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Иван Сокольский</div>
+                  <div class="calendar__user-more">24 года, Россия, среднее образование</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Беседа</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-germany.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">17</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Октября</div>
+                  <div class="calendar__date-time">18:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-portugal.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-3.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Константин Константинопольский</div>
+                  <div class="calendar__user-more">24 года, Россия, Высшее образование, Профессиональный репетитор</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Урок</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-russia.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">17</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Октября</div>
+                  <div class="calendar__date-time">19:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-germany.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-4.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Анна Петрова</div>
+                  <div class="calendar__user-more">24 года, Россия, среднее образование</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Беседа</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-uk.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="calendar__month">
+          <div class="calendar__caption">Ноябрь 2018</div>
+          <ul class="calendar__list">
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">15</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Ноября</div>
+                  <div class="calendar__date-time">18:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-germany.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-none.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Поиск собеседника</div>
+                  <div class="calendar__user-more">Любой пол, среднее образование</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Беседа</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-germany.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="calendar__item match">
+              <div class="calendar__message">Согласование</div>
+              <div class="calendar__date">
+                <div class="calendar__date-day">17</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Ноября</div>
+                  <div class="calendar__date-time">18:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-portugal.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-5.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Катерина Иванова</div>
+                  <div class="calendar__user-more">44 года, Россия, Высшее образование, Профессиональный репетитор</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Урок</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-russia.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="record" class="calendar__wrapper">
+        <div class="calendar__month">
+          <div class="calendar__caption">Ноябрь 2018</div>
+          <ul class="calendar__list">
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">15</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Ноября</div>
+                  <div class="calendar__date-time">18:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-germany.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-none.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Поиск собеседника</div>
+                  <div class="calendar__user-more">Любой пол, среднее образование</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Беседа</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-germany.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="archive" class="calendar__wrapper">
+        <div class="calendar__month">
+          <div class="calendar__caption">Октябрь 2018</div>
+          <ul class="calendar__list">
+            <li class="calendar__item">
+              <div class="calendar__date">
+                <div class="calendar__date-day">17</div>
+                <div class="calendar__date-info">
+                  <div class="calendar__date-month">Октября</div>
+                  <div class="calendar__date-time">19:00 - 20:00</div>
+                </div>
+              </div>
+              <div class="calendar__user">
+                <div class="calendar__user-img">
+                  <div class="calendar__user-country">
+                    <img src="./img/flag-germany.png">
+                  </div>
+                  <div class="calendar__user-photo">
+                    <img src="./img/user-4.png">
+                  </div>
+                </div>
+                <div class="calendar__user-info">
+                  <div class="calendar__user-name">Анна Петрова</div>
+                  <div class="calendar__user-more">24 года, Россия, среднее образование</div>
+                </div>
+              </div>
+              <div class="calendar__info">
+                <div class="calendar__info-type">Беседа</div>
+                <div class="calendar__info-country">
+                  <img src="./img/flag-uk.png">
+                </div>
+                <div class="calendar__info-menu"></div>
+                <ul class="calendar__dd">
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-germany.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Беседа</div>
+                  </li>
+                  <li class="calendar__dd-item">
+                    <div class="calendar__dd-country">
+                      <img src="./img/flag-russia.png">
+                    </div>
+                    <div class="calendar__dd-type">Урок</div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <a class="footer__logo" href="/">
+      <img src="./img/logo-f.svg">
+    </a>
+    <nav class="footer__nav">
+      <a class="footer__link" href="javascript:void(0);">О нас</a>
+      <a class="footer__link" href="javascript:void(0);">Помощь</a>
+      <a class="footer__link" href="javascript:void(0);">Репетиторам</a>
+    </nav>
+    <div class="footer__app">
+      <div class="footer__app-text">Скачайте приложение и получите<br> приветственный бонус!</div>
+      <div class="footer__app-box">
+        <a class="footer__app-img" href="javascript:void(0);">
+          <img src="./img/icon-as.svg">
+        </a>
+        <a class="footer__app-img" href="javascript:void(0);">
+          <img src="./img/icon-gp.svg">
+        </a>
+      </div>
+    </div>
+    <div class="footer__social">
+      <a class="footer__social-item fb" href="javascript:void(0);"></a>
+      <a class="footer__social-item vk" href="javascript:void(0);"></a>
+      <a class="footer__social-item ig" href="javascript:void(0);"></a>
+    </div>
+  </div>
+</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 </body>

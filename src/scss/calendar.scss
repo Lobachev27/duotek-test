@@ -1,0 +1,265 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.calendar{
+  position: relative;
+  padding: 30px 0;
+  &__row{
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  &__tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: $gray-text;
+    padding: 0 22px;
+    height: 40px;
+    background-color: $gray;
+    transition: 0.3s;
+    &:first-child{
+      border-radius: 10px 0 0 10px;
+    }
+    &:last-child{
+      border-radius: 0 10px 10px 0;
+    }
+    &.active{
+      background-color: $blue;
+      color: $white;
+      transition: 0.3s;
+    }
+  }
+  &__wrapper{
+    margin-top: 25px;
+  }
+  &__month{
+    margin-bottom: 30px;
+  }
+  &__caption{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 22px;
+    height: 30px;
+    color: $gray-text;
+    display: flex;
+    align-items: center;
+    background-color: $gray;
+    border-radius: 5px;
+    padding: 0 15px;
+  }
+  &__list{
+    list-style: none;
+  }
+  &__item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E5EA;
+    padding: 30px 0;
+    @media screen and (min-width: 768px) {
+      padding: 40px 0;
+    }
+    @media screen and (min-width: 992px) {
+      flex-wrap: nowrap;
+    }
+    &:last-child{
+      border: none;
+    }
+    &.match{
+      & .calendar__date-day,
+      & .calendar__date-month,
+      & .calendar__date-time{
+        color: $orange;
+      }
+      & .calendar__message{
+        display: block;
+      }
+    }
+  }
+  &__date{
+    display: flex;
+    align-items: center;
+    &-day{
+      font-size: 50px;
+      line-height: 20px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+    &-month,
+    &-time{
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+  &__user{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    order: 2;
+    @media screen and (min-width: 992px) {
+      order: 0;
+      width: 500px;
+      margin: 0 auto 0 50px;
+    }
+    &-img{
+      position: relative;
+      height: 56px;
+      width: 86px;
+      margin-right: 12px;
+    }
+    &-country{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      & img{
+        width: 100%;
+      }
+    }
+    &-photo{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      & img{
+        width: 100%;
+      }
+    }
+    &-info{
+      width: calc(100% - 98px);
+    }
+    &-name{
+      font-size: 15px;
+      font-weight: 500;
+      color: $blue;
+      line-height: 22px;
+    }
+    &-more{
+      font-size: 13px;
+      line-height: 12px;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &-type{
+      font-size: 15px;
+      line-height: 22px;
+    }
+    &-country{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 12px;
+      & img{
+        width: 100%;
+      }
+    }
+    &-menu{
+      width: 4px;
+      height: 16px;
+      background: url("../img/points.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  &__dd{
+    position: absolute;
+    list-style: none;
+    background-color: $white;
+    border: 1px solid $gray-text;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    width: 120px;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 3;
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: 0.7s;
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      padding: 7px 10px;
+      cursor: pointer;
+    }
+    &-country{
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      & img{
+        width: 100%;
+      }
+    }
+    &-type{
+      font-size: 13px;
+    }
+  }
+  &__message{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 13px;
+    line-height: 12px;
+    color: $orange;
+    padding-left: 17px;
+    @media screen and (min-width: 768px) {
+      top: 20px;
+    }
+    @media screen and (min-width: 992px) {
+      top: 105px;
+      left: 65px;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url("../img/icon-time.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

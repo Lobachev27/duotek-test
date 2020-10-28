@@ -1,0 +1,180 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: $blue;
+  z-index: 10;
+  & .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 94px;
+  }
+  &__logo{
+    display: block;
+    transition: 0.5s;
+    & img{
+      width: 160px;
+    }
+    &:hover{
+      transform: scale(0.9);
+      transition: 0.5s;
+    }
+  }
+  &__nav{
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 480px;
+    }
+  }
+  &__link{
+    @media screen and (min-width: 992px) {
+      font-size: 15px;
+      font-weight: 500;
+      color: $white;
+    }
+    &.active{
+      opacity: 0.5;
+    }
+    &:hover{
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+  }
+  &__user{
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+    }
+    &-img{
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+      & img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+    &-name{
+      color: $white;
+      font-size: 15px;
+      line-height: 17px;
+    }
+    &-count{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25px;
+      background-color: $white;
+      border-radius: 25px;
+      margin-top: 10px;
+    }
+    &-q{
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: $blue;
+      height: 100%;
+      border-right: 1px solid #D1D1D6;
+      padding: 0 24px 0 10px;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        background: url("../img/icon-q.svg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 17px;
+        height: 17px;
+      }
+    }
+    &-money{
+      font-weight: 600;
+      color: $blue;
+      padding: 0 10px;
+    }
+  }
+  &__menu{
+    display: block;
+    background: url("../img/menu.svg") no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 21px;
+    height: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+    &.active{
+      background: url("../img/cross.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: 0.3s;
+    }
+  }
+  &-mobile{
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 94px);
+    top: 94px;
+    background-color: $blue;
+    z-index: 10;
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+    visibility: hidden;
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition: 0.7s;
+    }
+    & .container{
+      position: relative;
+      height: 100%;
+    }
+    &__nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding-bottom: 47px;
+    }
+    &__link{
+      font-size: 18px;
+      color: $white;
+      font-weight: 500;
+      line-height: 1.4em;
+      text-transform: uppercase;
+      margin: 20px 0;
+      &.active{
+        opacity: 0.5;
+      }
+      &:hover{
+        opacity: 0.5;
+        transition: 0.3s;
+      }
+    }
+  }
+}
